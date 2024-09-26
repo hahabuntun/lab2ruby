@@ -8,5 +8,16 @@
     <strong>Email:</strong>
     <%= user.email %>
   </p>
+  <% if user.microposts.any? %>
+  <p>
+    <strong>First post:</strong>
+    <%= user.microposts.first.content %>
+  </p>
+<% else %>
+  <p>
+    <strong>First post:</strong>
+    <em>This user hasn't posted yet.</em>
+  </p>
+<% end %>
 
 </div>
